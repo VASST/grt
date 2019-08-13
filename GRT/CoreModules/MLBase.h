@@ -462,7 +462,7 @@ public:
     
     @return returns the minimum change value
     */
-//    Float getMinChange() const;
+    Float getMinChange() const;
     
     /**
     Gets the current learningRate value, this is value used to update the weights at each step of a learning algorithm such as stochastic gradient descent.
@@ -538,12 +538,12 @@ public:
     
     @return returns true if the order of the training dataset should be randomized, false otherwise
     */
-//    bool getRandomiseTrainingOrder() const;
+    bool getRandomiseTrainingOrder() const;
     
     /**
-    Gets if the model for the derived class has been succesfully trained.
+    Gets if the model for the derived class has been successfully trained.
     
-    @return returns true if the model for the derived class has been succesfully trained, false otherwise
+    @return returns true if the model for the derived class has been successfully trained, false otherwise
     */
     bool getTrained() const;
     
@@ -551,7 +551,7 @@ public:
     @deprecated getTrained() function instead
     This function is now depreciated. You should use the getTrained() function instead.
     
-    @return returns true if the model for the derived class has been succesfully trained, false otherwise
+    @return returns true if the model for the derived class has been successfully trained, false otherwise
     */
     GRT_DEPRECATED_MSG( "getModelTrained() is deprecated, use getTrained() instead", bool getModelTrained() const );
     
@@ -559,7 +559,7 @@ public:
      Returns true if the training algorithm converged during the most recent training process.
      This function will return false if the model has not been trained.
      
-     @return returns true if the training algorithm converged succesfully, false otherwise
+     @return returns true if the training algorithm converged successfully, false otherwise
      */
     bool getConverged() const;
     
