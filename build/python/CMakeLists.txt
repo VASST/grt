@@ -32,7 +32,9 @@ include_directories(${NUMPY_INCLUDE_DIR})
 
 include_directories(${GRT_SRC_DIR})
 
-add_compile_options(-Wno-deprecated)
+if(NOT WIN32)
+  add_compile_options(-Wno-deprecated)
+endif()
 
 set_property(SOURCE GRT.i PROPERTY CPLUSPLUS ON)
 set_property(SOURCE GRT.i PROPERTY SWIG_FLAGS -Wall -verbose -py3)

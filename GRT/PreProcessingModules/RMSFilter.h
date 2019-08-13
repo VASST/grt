@@ -34,7 +34,7 @@ GRT_BEGIN_NAMESPACE
 /**
  @brief The RMSFilter implements a root mean squared (RMS) filter.
 */
-class RMSFilter : public PreProcessing {
+class GRT_API RMSFilter : public PreProcessing {
 public:
     /**
     Constructor, sets the size of the filter (the size of the buffer used to store and filter data) and the dimensionality of the data it will filter.
