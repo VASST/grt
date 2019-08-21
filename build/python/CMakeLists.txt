@@ -36,11 +36,14 @@ if(NOT WIN32)
   add_compile_options(-Wno-deprecated)
 endif()
 
+set (UseSWIG_TARGET_NAME_PREFERENCE STANDARD)
 set_property(SOURCE GRT.i PROPERTY CPLUSPLUS ON)
 set_property(SOURCE GRT.i PROPERTY SWIG_FLAGS -Wall -verbose -py3)
 swig_add_library(GRT LANGUAGE python SOURCES GRT.i)
 
-swig_link_libraries(GRT ${PYTHON_LIBRARIES} ${GRT_LIB_NAME} )
+target_link_libraries(GRT ${PYTHON_LIBRARIES} ${GRT_LIB_NAME} )
+
+target_compile_definitions(GRT PUBLIC ${GRT_OPTIONAL_COMPILE_DEFINITIONS})
 
 # Copy python examples files
 file(GLOB PYTHON_EXAMPLES
